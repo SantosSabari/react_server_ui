@@ -10,7 +10,7 @@ import axios from 'axios';
 
 
 function Contacts() {
-    const { data, loading, error, fetch } = useFetch<{ message: string }>('http://localhost:5000/api/user');
+    const { data, loading, error, fetch } = useFetch<{ message: string }>('http://localhost:5000/api/users');
     const [isOpenDrawer, setOpenDrawer] = useState(false)
 
     if (loading) return <p>Loading...</p>;

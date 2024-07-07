@@ -28,7 +28,7 @@ export const fetchUsers = (): ThunkAction<void, typeof store, unknown, Action<st
     return async dispatch => {
         dispatch(loadUsers());
         try {
-            const response = await fetch('https://dummyjson.com/users');
+            const response = await fetch('http://localhost:5000/api/users');
             const data = await response.json();
             dispatch(userLoadedSuccessFully(data));
         } catch (error) {
