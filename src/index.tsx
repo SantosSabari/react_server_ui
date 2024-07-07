@@ -3,14 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Dashboard from './pages/dashboard';
-import Errorpage from './pages/errorpage';
-import Contacts from './pages/contacts';
 import { Provider } from 'react-redux';
 import store, { RootState } from './store';
 import Javascript from './pages/javascript_questions';
 import LoginPage from './pages/session/login-page';
+import ErrorBoundary from './components/errror-boundarry';
 
 
 
@@ -21,8 +18,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <Provider store={store}>
     <React.StrictMode>
-          {/* <RouterProvider router={Router}></RouterProvider> */}
+      {/* <ErrorBoundary> */}
           <App></App>
+      {/* </ErrorBoundary> */}
     </React.StrictMode>
   </Provider>
 );

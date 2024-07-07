@@ -67,6 +67,7 @@ import { BrowserRouter as Router, Routes, Route, createBrowserRouter } from 'rea
 import Dashboard from './pages/dashboard';
 import Contacts from './pages/contacts';
 import { Home } from '@mui/icons-material';
+import Blogs from './pages/blogs';
 
 // const Routers = createBrowserRouter(
 //   [
@@ -115,9 +116,9 @@ const App = () => {
         <Navbar />
         <div className="container mx-auto px-10 mt-5">
           <Routes>
-            <Route path="/" element={<Home />} errorElement={<Errorpage/>}/>
+            <Route path="/" element={<Dashboard />} errorElement={<Errorpage/>}/>
             {/* <Route path="/login" element={<LoginPage />} /> */}
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path='/blogs' element ={<Blogs/>} />
             <Route path="/contact" element={<Contacts />} />
           </Routes>
         </div>

@@ -11,13 +11,7 @@ const dispatch = useDispatch()
 const state = useSelector((state: RootState) => state.theme);
 const isDark = state.isDark
 console.log(isDark)
-// const [isDark, setDarkTheme] = useState(false);
-// const toggleTheme =() =>{
-    
-//     setDarkTheme((preState) =>!preState)
-//     console.log(isDark)
-//     dispatch(setThemeAction(isDark))
-// }
+
 
     const setDarkTheme = () => {
         const myTheme = !isDark
@@ -28,7 +22,7 @@ console.log(isDark)
       <div className="container mx-auto flex justify-between items-center">
       <Link to='/' className="text-white text-lg font-bold">My Website</Link>
         <div className="hidden md:flex space-x-4">
-          <Link to='/dashboard' className="text-white hover:bg-blue-700 px-3 py-2 rounded">Dashboard</Link>
+          <Link to='/blogs' className="text-white hover:bg-blue-700 px-3 py-2 rounded">Blogs</Link>
           <Link to='/about' className="text-white hover:bg-blue-700 px-3 py-2 rounded">About</Link>
           <Link to='/contact' className="text-white hover:bg-blue-700 px-3 py-2 rounded">Contact</Link>
         </div>
